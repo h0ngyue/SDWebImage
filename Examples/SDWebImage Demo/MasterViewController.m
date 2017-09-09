@@ -67,20 +67,21 @@
         [SDWebImageManager sharedManager].imageDownloader.password = @"httpwatch01";
         
         _objects = [NSMutableArray arrayWithObjects:
-                    @"http://www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?0.35786508303135633",     // requires HTTP auth, used to demo the NTLM auth
-                    @"http://assets.sbnation.com/assets/2512203/dogflops.gif",
-                    @"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif",
+//                    @"http://www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?0.35786508303135633",     // requires HTTP auth, used to demo the NTLM auth
+//                    @"http://assets.sbnation.com/assets/2512203/dogflops.gif",
+//                    @"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif",
                     @"http://www.ioncannon.net/wp-content/uploads/2011/06/test2.webp",
-                    @"http://www.ioncannon.net/wp-content/uploads/2011/06/test9.webp",
-                    @"http://littlesvr.ca/apng/images/SteamEngine.webp",
-                    @"http://littlesvr.ca/apng/images/world-cup-2014-42.webp",
-                    @"https://isparta.github.io/compare-webp/image/gif_webp/webp/2.webp",
-                    @"https://nr-platform.s3.amazonaws.com/uploads/platform/published_extension/branding_icon/275/AmazonS3.png",
+                    @"http://192.168.2.208:8000/large.webp",
+//                    @"http://www.ioncannon.net/wp-content/uploads/2011/06/test9.webp",
+//                    @"http://littlesvr.ca/apng/images/SteamEngine.webp",
+//                    @"http://littlesvr.ca/apng/images/world-cup-2014-42.webp",
+//                    @"https://isparta.github.io/compare-webp/image/gif_webp/webp/2.webp",
+//                    @"https://nr-platform.s3.amazonaws.com/uploads/platform/published_extension/branding_icon/275/AmazonS3.png",
                     nil];
 
-        for (int i=0; i<100; i++) {
-            [_objects addObject:[NSString stringWithFormat:@"https://s3.amazonaws.com/fast-image-cache/demo-images/FICDDemoImage%03d.jpg", i]];
-        }
+//        for (int i=0; i<100; i++) {
+//            [_objects addObject:[NSString stringWithFormat:@"https://s3.amazonaws.com/fast-image-cache/demo-images/FICDDemoImage%03d.jpg", i]];
+//        }
 
     }
     [SDWebImageManager.sharedManager.imageDownloader setValue:@"SDWebImage Demo" forHTTPHeaderField:@"AppName"];

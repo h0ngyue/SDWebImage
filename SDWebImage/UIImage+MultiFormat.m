@@ -24,6 +24,7 @@
     
     UIImage *image;
     SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
+    NSLog(@"sd_imageWithData, format:%ld", (long)imageFormat);
     if (imageFormat == SDImageFormatGIF) {
         image = [UIImage sd_animatedGIFWithData:data];
     }
