@@ -15,6 +15,7 @@
 #import "NSData+ImageContentType.h"
 #import "FLAnimatedImage.h"
 #import "UIImageView+WebCache.h"
+#import "KwaiWebImageProfiler.h"
 
 @implementation FLAnimatedImageView (WebCache)
 
@@ -48,11 +49,13 @@
                   progress:(nullable SDWebImageDownloaderProgressBlock)progressBlock
                  completed:(nullable SDExternalCompletionBlock)completedBlock {
     __weak typeof(self)weakSelf = self;
+    [[KwaiWebImageProfiler sharedInstance] startMetric: [url absoluteString]];
     [self sd_internalSetImageWithURL:url
                     placeholderImage:placeholder
                              options:options
                         operationKey:nil
                        setImageBlock:^(UIImage *image, NSData *imageData) {
+                           [[KwaiWebImageProfiler sharedInstance] addTagFor:[url absoluteString] tag:@"getUIImageFinish"];
                            SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:imageData];
                            if (imageFormat == SDImageFormatGIF) {
                                weakSelf.animatedImage = [FLAnimatedImage animatedImageWithGIFData:imageData];
@@ -61,6 +64,8 @@
                                weakSelf.image = image;
                                weakSelf.animatedImage = nil;
                            }
+                           [[KwaiWebImageProfiler sharedInstance] addTagFor:[url absoluteString] tag:@"setImageFinish"];
+                           [[KwaiWebImageProfiler sharedInstance] endMetric: [url absoluteString]];
 
                        }
                             progress:progressBlock

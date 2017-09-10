@@ -431,13 +431,9 @@ didReceiveResponse:(NSURLResponse *)response
              *  So we don't need to check the cache option here, since the system will obey the cache option
              */
             if (self.imageData) {
-                NSTimeInterval start = [SDWebImageDownloaderOperation getTime];
                 UIImage *image = [UIImage sd_imageWithData:self.imageData];
-                NSTimeInterval tag_decode = [SDWebImageDownloaderOperation getTime];
                 NSString *key = [[SDWebImageManager sharedManager] cacheKeyForURL:self.request.URL];
-                NSTimeInterval tag_cache = [SDWebImageDownloaderOperation getTime];
                 image = [self scaledImageForKey:key image:image];
-                NSTimeInterval tag_scale = [SDWebImageDownloaderOperation getTime];
                 
                 NSTimeInterval decompressImages_scale = 0;
                 // Do not force decoding animated GIFs
@@ -454,8 +450,8 @@ didReceiveResponse:(NSURLResponse *)response
                         }
                     }
                 }
-                NSLog(@"profile , decode:%fms,scaledImage :%fms, cache:%fms, decompressImages_scale:%fms", tag_decode-start, tag_cache-tag_decode, tag_scale-tag_cache,
-                      decompressImages_scale-tag_scale);
+//                NSLog(@"profile , decode:%fms,scaledImage :%fms, cache:%fms, decompressImages_scale:%fms", tag_decode-start, tag_cache-tag_decode, tag_scale-tag_cache,
+//                      decompressImages_scale-tag_scale);
                 if (CGSizeEqualToSize(image.size, CGSizeZero)) {
                     [self callCompletionBlocksWithError:[NSError errorWithDomain:SDWebImageErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"Downloaded image has 0 pixels"}]];
                 } else {

@@ -10,6 +10,7 @@
 
 @interface KwaiWebImageProfiler : NSObject
 +(nonnull instancetype) sharedInstance;
--(void)addMetricForKey:(NSString *)url metric:(NSString *)name  consume:(double)consumeMs;
--(void)endMetric:(NSString *) url;
+-(void)startMetric:(NSString *_Nonnull) url;
+-(void)addTagFor:(NSString * _Nonnull)url tag:(NSString * _Nonnull)name;
+-(void)endMetric:(NSString *_Nonnull) url;
 @end
