@@ -306,6 +306,10 @@
 		5BCFBCED1F64F20D000B9748 /* KwaiWebImageProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BCFBCEE1F64F24E000B9748 /* KwaiWebImageProfiler.h in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */; };
 		5BCFBCEF1F64F24E000B9748 /* KwaiWebImageProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */; };
+		5BCFBCF21F6530BD000B9748 /* KwaiTimeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCFBCF01F6530BD000B9748 /* KwaiTimeUtil.h */; };
+		5BCFBCF31F6530BD000B9748 /* KwaiTimeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCFBCF01F6530BD000B9748 /* KwaiTimeUtil.h */; };
+		5BCFBCF41F6530BD000B9748 /* KwaiTimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCF11F6530BD000B9748 /* KwaiTimeUtil.m */; };
+		5BCFBCF51F6530BD000B9748 /* KwaiTimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCF11F6530BD000B9748 /* KwaiTimeUtil.m */; };
 		5D5B9142188EE8DD006D06BD /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D5B9140188EE8DD006D06BD /* NSData+ImageContentType.h */; };
 		5D5B9145188EE8DD006D06BD /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9141188EE8DD006D06BD /* NSData+ImageContentType.m */; };
 		80377BF81F2F665300F89830 /* bit_reader_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 80377BDE1F2F665300F89830 /* bit_reader_inl_utils.h */; };
@@ -1035,6 +1039,8 @@
 		53FB894814D35E9E0020B787 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KwaiWebImageProfiler.h; sourceTree = "<group>"; };
 		5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KwaiWebImageProfiler.m; sourceTree = "<group>"; };
+		5BCFBCF01F6530BD000B9748 /* KwaiTimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KwaiTimeUtil.h; sourceTree = "<group>"; };
+		5BCFBCF11F6530BD000B9748 /* KwaiTimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KwaiTimeUtil.m; sourceTree = "<group>"; };
 		5D5B9140188EE8DD006D06BD /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		5D5B9141188EE8DD006D06BD /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		80377BDE1F2F665300F89830 /* bit_reader_inl_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bit_reader_inl_utils.h; sourceTree = "<group>"; };
@@ -1400,6 +1406,8 @@
 			children = (
 				5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */,
 				5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */,
+				5BCFBCF01F6530BD000B9748 /* KwaiTimeUtil.h */,
+				5BCFBCF11F6530BD000B9748 /* KwaiTimeUtil.m */,
 			);
 			name = Kwai;
 			sourceTree = "<group>";
@@ -1868,6 +1876,7 @@
 				80377EB41F2F66D400F89830 /* vp8li_dec.h in Headers */,
 				4A2CAE1A1AB4BB6400B6BC39 /* SDWebImageOperation.h in Headers */,
 				80377C331F2F666300F89830 /* endian_inl_utils.h in Headers */,
+				5BCFBCF31F6530BD000B9748 /* KwaiTimeUtil.h in Headers */,
 				4A2CAE1B1AB4BB6800B6BC39 /* SDWebImageDownloader.h in Headers */,
 				4A2CAE271AB4BB7500B6BC39 /* MKAnnotationView+WebCache.h in Headers */,
 				431739501CDFC8B70008FEB9 /* encode.h in Headers */,
@@ -1932,6 +1941,7 @@
 				80377E961F2F66D000F89830 /* webpi_dec.h in Headers */,
 				80377BF81F2F665300F89830 /* bit_reader_inl_utils.h in Headers */,
 				530E49EA16464C7C002868E7 /* SDWebImageDownloaderOperation.h in Headers */,
+				5BCFBCF21F6530BD000B9748 /* KwaiTimeUtil.h in Headers */,
 				ABBE71A718C43B4D00B75E91 /* UIImageView+HighlightedWebCache.h in Headers */,
 				80377C071F2F665300F89830 /* quant_levels_dec_utils.h in Headers */,
 				80377E941F2F66D000F89830 /* vp8li_dec.h in Headers */,
@@ -2680,6 +2690,7 @@
 				80377D891F2F66A700F89830 /* lossless_enc_mips32.c in Sources */,
 				80377D861F2F66A700F89830 /* filters.c in Sources */,
 				80377D651F2F66A700F89830 /* alpha_processing_sse2.c in Sources */,
+				5BCFBCF51F6530BD000B9748 /* KwaiTimeUtil.m in Sources */,
 				4A2CAE301AB4BB7500B6BC39 /* UIImage+MultiFormat.m in Sources */,
 				80377C2D1F2F666300F89830 /* bit_reader_utils.c in Sources */,
 				80377D761F2F66A700F89830 /* dec_sse2.c in Sources */,
@@ -2782,6 +2793,7 @@
 				5376130D155AD0D5005750A4 /* SDWebImagePrefetcher.m in Sources */,
 				80377C101F2F665300F89830 /* utils.c in Sources */,
 				80377D031F2F66A100F89830 /* lossless_enc_sse41.c in Sources */,
+				5BCFBCF41F6530BD000B9748 /* KwaiTimeUtil.m in Sources */,
 				80377E8E1F2F66D000F89830 /* quant_dec.c in Sources */,
 				80377CE41F2F66A100F89830 /* cost_sse2.c in Sources */,
 				80377D0F1F2F66A100F89830 /* rescaler_mips32.c in Sources */,
