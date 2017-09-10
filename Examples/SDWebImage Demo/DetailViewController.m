@@ -43,6 +43,7 @@
                           placeholderImage:nil
                                    options:SDWebImageProgressiveDownload
                                   progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL *targetURL) {
+                                      NSLog(@"DetailView, progress:%ld", (long)receivedSize);
                                       if (!activityIndicator) {
                                           [weakImageView addSubview:activityIndicator = [UIActivityIndicatorView.alloc initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray]];
                                           activityIndicator.center = weakImageView.center;
@@ -51,6 +52,7 @@
                                   }
                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                      [activityIndicator removeFromSuperview];
+                                     NSLog(@"DetailView, completed");
                                      activityIndicator = nil;
                                  }];
     }

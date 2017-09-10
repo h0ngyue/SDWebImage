@@ -464,6 +464,7 @@ didReceiveResponse:(NSURLResponse *)response
             } else {
                 [self callCompletionBlocksWithError:[NSError errorWithDomain:SDWebImageErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : @"Image data is nil"}]];
             }
+            
         }
     }
     [self done];

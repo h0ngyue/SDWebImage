@@ -53,6 +53,7 @@
                              options:options
                         operationKey:nil
                        setImageBlock:^(UIImage *image, NSData *imageData) {
+                           NSTimeInterval start = [[NSDate date] timeIntervalSince1970]*1000;
                            SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:imageData];
                            if (imageFormat == SDImageFormatGIF) {
                                weakSelf.animatedImage = [FLAnimatedImage animatedImageWithGIFData:imageData];
@@ -61,6 +62,9 @@
                                weakSelf.image = image;
                                weakSelf.animatedImage = nil;
                            }
+                           
+                           NSTimeInterval end = [[NSDate date] timeIntervalSince1970]*1000;
+                           NSLog(@"profile , setImage:%fms", end-start);
                        }
                             progress:progressBlock
                            completed:completedBlock];

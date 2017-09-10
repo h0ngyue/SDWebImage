@@ -301,6 +301,11 @@
 		53761320155AD0D5005750A4 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 53922D95148C56230056699D /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53EDFB8A17623F7C00698166 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 53EDFB8817623F7C00698166 /* UIImage+MultiFormat.h */; };
 		53EDFB8C17623F7C00698166 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDFB8917623F7C00698166 /* UIImage+MultiFormat.m */; };
+		5BCFBCEB1F64ED6B000B9748 /* KwaiWebImageProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BCFBCEC1F64ED6B000B9748 /* KwaiWebImageProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */; };
+		5BCFBCED1F64F20D000B9748 /* KwaiWebImageProfiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BCFBCEE1F64F24E000B9748 /* KwaiWebImageProfiler.h in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */; };
+		5BCFBCEF1F64F24E000B9748 /* KwaiWebImageProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */; };
 		5D5B9142188EE8DD006D06BD /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D5B9140188EE8DD006D06BD /* NSData+ImageContentType.h */; };
 		5D5B9145188EE8DD006D06BD /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B9141188EE8DD006D06BD /* NSData+ImageContentType.m */; };
 		80377BF81F2F665300F89830 /* bit_reader_inl_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 80377BDE1F2F665300F89830 /* bit_reader_inl_utils.h */; };
@@ -1028,6 +1033,8 @@
 		53EDFB921762547C00698166 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		53FB893F14D35D1A0020B787 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		53FB894814D35E9E0020B787 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KwaiWebImageProfiler.h; sourceTree = "<group>"; };
+		5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KwaiWebImageProfiler.m; sourceTree = "<group>"; };
 		5D5B9140188EE8DD006D06BD /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		5D5B9141188EE8DD006D06BD /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		80377BDE1F2F665300F89830 /* bit_reader_inl_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bit_reader_inl_utils.h; sourceTree = "<group>"; };
@@ -1322,6 +1329,7 @@
 		53922D74148C55820056699D /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				5BCFBCE81F64ED47000B9748 /* Kwai */,
 				53922D88148C56230056699D /* SDWebImageCompat.h */,
 				5340674F167780C40042B59E /* SDWebImageCompat.m */,
 				530E49E71646388E002868E7 /* SDWebImageOperation.h */,
@@ -1385,6 +1393,15 @@
 				53922D92148C56230056699D /* SDWebImagePrefetcher.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		5BCFBCE81F64ED47000B9748 /* Kwai */ = {
+			isa = PBXGroup;
+			children = (
+				5BCFBCE91F64ED6B000B9748 /* KwaiWebImageProfiler.h */,
+				5BCFBCEA1F64ED6B000B9748 /* KwaiWebImageProfiler.m */,
+			);
+			name = Kwai;
 			sourceTree = "<group>";
 		};
 		DA577C121998E60B007367ED /* libwebp */ = {
@@ -1815,6 +1832,7 @@
 				80377D951F2F66A700F89830 /* mips_macro.h in Headers */,
 				80377C3D1F2F666300F89830 /* quant_levels_utils.h in Headers */,
 				4317394F1CDFC8B70008FEB9 /* demux.h in Headers */,
+				5BCFBCED1F64F20D000B9748 /* KwaiWebImageProfiler.h in Headers */,
 				43CE757D1CFE9427006C64D0 /* FLAnimatedImageView.h in Headers */,
 				80377C301F2F666300F89830 /* bit_writer_utils.h in Headers */,
 				431739541CDFC8B70008FEB9 /* types.h in Headers */,
@@ -1889,6 +1907,7 @@
 				431738C31CDFC2660008FEB9 /* types.h in Headers */,
 				80377D0C1F2F66A100F89830 /* msa_macro.h in Headers */,
 				80377D1D1F2F66A100F89830 /* yuv.h in Headers */,
+				5BCFBCEB1F64ED6B000B9748 /* KwaiWebImageProfiler.h in Headers */,
 				43CE75D01CFE98E0006C64D0 /* FLAnimatedImageView+WebCache.h in Headers */,
 				80377C051F2F665300F89830 /* huffman_utils.h in Headers */,
 				80377E881F2F66D000F89830 /* alphai_dec.h in Headers */,
@@ -2594,6 +2613,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCFBCEE1F64F24E000B9748 /* KwaiWebImageProfiler.h in Sources */,
+				5BCFBCEF1F64F24E000B9748 /* KwaiWebImageProfiler.m in Sources */,
 				80377D8E1F2F66A700F89830 /* lossless_enc.c in Sources */,
 				80377D781F2F66A700F89830 /* dec.c in Sources */,
 				80377DA21F2F66A700F89830 /* upsampling.c in Sources */,
@@ -2794,6 +2815,7 @@
 				80377D071F2F66A100F89830 /* lossless_neon.c in Sources */,
 				80377E901F2F66D000F89830 /* vp8_dec.c in Sources */,
 				80377C041F2F665300F89830 /* huffman_utils.c in Sources */,
+				5BCFBCEC1F64ED6B000B9748 /* KwaiWebImageProfiler.m in Sources */,
 				80377C061F2F665300F89830 /* quant_levels_dec_utils.c in Sources */,
 				80377D091F2F66A100F89830 /* lossless.c in Sources */,
 				80377D121F2F66A100F89830 /* rescaler_sse2.c in Sources */,

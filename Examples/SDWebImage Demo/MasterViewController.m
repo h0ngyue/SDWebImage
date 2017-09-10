@@ -12,6 +12,7 @@
 #import <SDWebImage/FLAnimatedImageView.h>
 #import <SDWebImage/FLAnimatedImageView+WebCache.h>
 #import <SDWebImage/UIView+WebCache.h>
+#import <SDWebImage/KwaiWebImageProfiler.h>
 
 
 @interface MyCustomTableViewCell : UITableViewCell
@@ -71,7 +72,7 @@
 //                    @"http://assets.sbnation.com/assets/2512203/dogflops.gif",
 //                    @"https://raw.githubusercontent.com/liyong03/YLGIFImage/master/YLGIFImageDemo/YLGIFImageDemo/joy.gif",
                     @"http://www.ioncannon.net/wp-content/uploads/2011/06/test2.webp",
-                    @"http://192.168.2.208:8000/large.webp",
+//                    @"http://192.168.2.208:8000/large.webp",
 //                    @"http://www.ioncannon.net/wp-content/uploads/2011/06/test9.webp",
 //                    @"http://littlesvr.ca/apng/images/SteamEngine.webp",
 //                    @"http://littlesvr.ca/apng/images/world-cup-2014-42.webp",
@@ -143,7 +144,7 @@
         self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     }
     NSString *largeImageURL = [_objects[indexPath.row] stringByReplacingOccurrencesOfString:@"small" withString:@"source"];
-    self.detailViewController.imageURL = [NSURL URLWithString:largeImageURL];
+//    self.detailViewController.imageURL = [NSURL URLWithString:largeImageURL];
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 
